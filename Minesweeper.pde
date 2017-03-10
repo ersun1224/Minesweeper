@@ -84,6 +84,14 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     //your code here
+    for(int r = 0; r < NUM_ROWS; r++) {
+        for(int c = 0; c < NUM_COLS; c++) {
+            if(bombs.contains(buttons[r][c])) {
+                buttons[r][c].clicked = true;
+            }
+            buttons[r][c].setLabel("");
+        }
+    }
     buttons[11][7].setLabel("Y");
     buttons[11][8].setLabel("O");
     buttons[11][9].setLabel("U");
